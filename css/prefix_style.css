@@ -111,7 +111,7 @@
 /* Глобальные стили */
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -125,7 +125,7 @@ body {
 *::after,
 *::before {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 a {
@@ -166,7 +166,7 @@ svg {
   height: 1px;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -179,7 +179,7 @@ svg {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .list-reset {
@@ -225,13 +225,13 @@ svg {
 
 .header__top {
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 75px;
-  -moz-column-gap: 75px;
-  column-gap: 75px;
+     -moz-column-gap: 75px;
+          column-gap: 75px;
 }
 
 .header__link-box {
@@ -256,21 +256,21 @@ svg {
 
 .header__logo {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .header__navigation {
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 45px;
-  -moz-column-gap: 45px;
-  column-gap: 45px;
+     -moz-column-gap: 45px;
+          column-gap: 45px;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -307,9 +307,16 @@ svg {
   background-color: var(--dim-blueviolet);
 }
 
-.header__list-box::-webkit-scrollbar-thumb:hover {
-  background-color: var(--normal-blueviolet);
+
+
+/* Убираем :hover на сенсорны устройствах */
+@media (any-hover: hover) {
+  .header__list-box::-webkit-scrollbar-thumb:hover {
+    background-color: var(--normal-blueviolet);
+  }
 }
+
+
 
 .header__list-box::-webkit-scrollbar-thumb:active {
   background-color: var(--saturated-blueviolet);
@@ -319,8 +326,8 @@ svg {
 
 .header__list {
   -webkit-column-gap: 49px;
-  -moz-column-gap: 49px;
-  column-gap: 49px;
+     -moz-column-gap: 49px;
+          column-gap: 49px;
   row-gap: 20px;
   max-width: 688px;
   min-width: 688px;
@@ -373,7 +380,7 @@ svg {
   display: block;
   margin-bottom: 2px;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+      flex-shrink: 0;
   outline: 2px solid transparent;
   outline-offset: -2px;
   width: 24px;
@@ -415,16 +422,16 @@ svg {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home__logo {
@@ -476,12 +483,12 @@ svg {
 
 .home__link-box {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 100%;
   -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
   row-gap: 22px;
 }
 
@@ -537,8 +544,8 @@ svg {
 
 .podcast__cards {
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   --elements: 2;
   --column-gap: 30px;
@@ -556,11 +563,11 @@ svg {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 39px 30px 39px 142px;
   height: 100%;
   background-repeat: no-repeat;
@@ -649,10 +656,10 @@ svg {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 
 .transfers__title.reset {
@@ -666,11 +673,11 @@ svg {
 .transfers__aside {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: -13px;
   margin-bottom: -14px;
   max-width: 255px;
@@ -739,8 +746,8 @@ svg {
   max-width: 824px;
   width: 100%;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   --elements: 3;
   --column-gap: 30px;
@@ -793,14 +800,14 @@ svg {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
   padding: 20px 15px 16px;
   height: 100%;
   outline: 1px solid var(--dim-grey);
@@ -897,14 +904,14 @@ svg {
 .guests__cards {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 50px;
 }
 
 .guests__card {
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   max-width: 920px;
   width: 100%;
   min-height: 272px;
@@ -914,20 +921,20 @@ svg {
 .guests__content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   row-gap: 20px;
 }
 
 .guests__pictyre-box {
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+      flex-shrink: 0;
   margin-right: 30px;
 }
 
@@ -935,7 +942,7 @@ svg {
   display: block;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .guests-content__name {
@@ -954,6 +961,8 @@ svg {
 }
 
 .guests-content__esters-guests {
+  display: inline-block;
+  text-align: center;
   padding: 11px 19px 10px;
   outline: 2px solid var(--dim-blueviolet);
   outline-offset: -1px;
@@ -1001,16 +1010,16 @@ svg {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 
 .playlists__info-box {
@@ -1049,8 +1058,8 @@ svg {
 
 .playlists__cards {
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 31px;
   max-width: 730px;
   --elements: 4;
@@ -1130,14 +1139,14 @@ svg {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   row-gap: 4px;
   border: 1px solid var(--dim-grey);
   padding: 15px 15px 11px;
@@ -1172,16 +1181,16 @@ svg {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 25px;
-  -moz-column-gap: 25px;
-  column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
   min-height: 579px;
 }
 
@@ -1320,8 +1329,8 @@ svg {
 .about__people {
   margin-bottom: 30px;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   --elements: 4;
   --column-gap: 30px;
@@ -1376,11 +1385,11 @@ svg {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   max-width: 920px;
 }
 
@@ -1486,11 +1495,11 @@ svg {
 
 .about-form__box-input {
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   margin-bottom: 30px;
   width: 100%;
@@ -1567,11 +1576,11 @@ svg {
 /* Контейнер кнопки отправить */
 .about-form__send-box {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 30px;
   margin-bottom: 29px;
   max-width: 455px;
@@ -1622,9 +1631,9 @@ svg {
 .about-form__label-checkbox {
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 
@@ -1669,8 +1678,8 @@ svg {
   height: 12px;
   outline: 1px solid #fff;
   -webkit-transform: translateY(-58%);
-  -ms-transform: translateY(-58%);
-  transform: translateY(-58%);
+      -ms-transform: translateY(-58%);
+          transform: translateY(-58%);
 }
 
 
@@ -1684,8 +1693,8 @@ svg {
   width: 11px;
   height: 11px;
   -webkit-transform: translateY(-56%);
-  -ms-transform: translateY(-56%);
-  transform: translateY(-56%);
+      -ms-transform: translateY(-56%);
+          transform: translateY(-56%);
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94976 1.08233L4.00002 6.03208L1.17159 3.20365' stroke='%23AA9DFA' stroke-width='2' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
@@ -1719,14 +1728,14 @@ svg {
 
 .footer-top__container {
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer__site-logo-box {
   -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 23px;
   margin-bottom: 20px;
   max-width: 350px;
@@ -1741,9 +1750,16 @@ svg {
   transition: outline-color var(--transition-time);
 }
 
-.footer__site-link:focus-visible:not(:hover) {
-  outline-color: var(--dim-blueviolet);
+
+
+/* Убираем :hover на сенсорных устройствах */
+@media (any-hover: hover) {
+  .footer__site-link:focus-visible:not(:hover) {
+    outline-color: var(--dim-blueviolet);
+  }
 }
+
+
 
 .footer__site-logo {
   display: block;
@@ -1752,8 +1768,8 @@ svg {
 .footer-socials__list {
   row-gap: 15px;
   -webkit-column-gap: 23px;
-  -moz-column-gap: 23px;
-  column-gap: 23px;
+     -moz-column-gap: 23px;
+          column-gap: 23px;
   max-width: 118px;
 }
 
@@ -1864,8 +1880,8 @@ svg {
   -ms-grid-columns: 86px 99px 96px 99px 75px;
   grid-template-columns: 86px 96px 75px;
   -webkit-column-gap: 99px;
-  -moz-column-gap: 99px;
-  column-gap: 99px;
+     -moz-column-gap: 99px;
+          column-gap: 99px;
   row-gap: 18px;
   margin-top: -2px;
   margin-right: -5px;
@@ -1873,8 +1889,8 @@ svg {
 
 .footer-navigation__item {
   -webkit-columns: 88px;
-  -moz-columns: 88px;
-  columns: 88px;
+     -moz-columns: 88px;
+          columns: 88px;
 }
 
 .footer-navigation__link {
@@ -1919,8 +1935,8 @@ svg {
   .playlists__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .playlists__info-box {
@@ -1942,10 +1958,10 @@ svg {
   .playlists__card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     padding-top: 0;
     padding-left: 112px;
     min-height: 112px;
@@ -2061,8 +2077,8 @@ svg {
   .about-form__checkbox-descr::after {
     left: 2px;
     -webkit-transform: translateY(-65%);
-    -ms-transform: translateY(-65%);
-    transform: translateY(-65%);
+        -ms-transform: translateY(-65%);
+            transform: translateY(-65%);
   }
 
 
@@ -2074,8 +2090,8 @@ svg {
 
   .footer-socials__list {
     -webkit-column-gap: 25px;
-    -moz-column-gap: 25px;
-    column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
     margin-left: 2px;
   }
 
@@ -2101,8 +2117,8 @@ svg {
     padding-top: 28px;
     padding-bottom: 26px;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .header__link-box {
@@ -2145,9 +2161,16 @@ svg {
     background-color: var(--dim-blueviolet);
   }
 
-  .header__navigation::-webkit-scrollbar-thumb:hover {
-    background-color: var(--normal-blueviolet);
+
+
+  /* Убираем :hover эффекты на сенсорных устройствах */
+  @media (any-hover: hover) {
+    .header__navigation::-webkit-scrollbar-thumb:hover {
+      background-color: var(--normal-blueviolet);
+    }
   }
+
+
 
   .header__navigation::-webkit-scrollbar-thumb:active {
     background-color: var(--saturated-blueviolet);
@@ -2158,7 +2181,7 @@ svg {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 15px;
     max-width: 102px;
   }
@@ -2166,8 +2189,8 @@ svg {
   .header__list {
     margin-left: -6px;
     -webkit-column-gap: 95.5px;
-    -moz-column-gap: 95.5px;
-    column-gap: 95.5px;
+       -moz-column-gap: 95.5px;
+            column-gap: 95.5px;
     min-width: 834px;
     max-width: 834px;
   }
@@ -2182,8 +2205,8 @@ svg {
   /* ----- Секция home ----- */
   .home__cotainer {
     -webkit-column-gap: 32px;
-    -moz-column-gap: 32px;
-    column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
   }
 
   .home__logo::before {
@@ -2247,8 +2270,8 @@ svg {
 
   .purchase__container {
     -webkit-column-gap: 34px;
-    -moz-column-gap: 34px;
-    column-gap: 34px;
+       -moz-column-gap: 34px;
+            column-gap: 34px;
   }
 
   .purchase__wrapper {
@@ -2298,11 +2321,11 @@ svg {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
     min-width: 549px;
   }
 
@@ -2327,11 +2350,11 @@ svg {
   /* ----- Секция home ----- */
   .home__cotainer {
     -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 
   .home__content {
@@ -2414,11 +2437,11 @@ svg {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
     margin-left: auto;
     margin-right: auto;
     padding-top: 31px;
@@ -2461,8 +2484,8 @@ svg {
   .guests__card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 100%;
   }
 
@@ -2508,8 +2531,8 @@ svg {
   .purchase__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .purchase__picture-box {
@@ -2576,8 +2599,8 @@ svg {
   .about-form__checkbox-descr::before {
     top: 50%;
     -webkit-transform: translateY(-68%);
-    -ms-transform: translateY(-68%);
-    transform: translateY(-68%)
+        -ms-transform: translateY(-68%);
+            transform: translateY(-68%)
   }
 
 
@@ -2592,28 +2615,28 @@ svg {
   .footer-top__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     row-gap: 84px;
   }
 
   .footer__logo-box {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 0;
   }
 
@@ -2627,8 +2650,8 @@ svg {
 
   .footer-socials__list {
     -webkit-column-gap: 27px;
-    -moz-column-gap: 27px;
-    column-gap: 27px;
+       -moz-column-gap: 27px;
+            column-gap: 27px;
     margin-left: -4px;
     max-width: 146px;
   }
@@ -2641,8 +2664,8 @@ svg {
 
   .footer-navigation__list {
     -webkit-column-gap: 146px;
-    -moz-column-gap: 146px;
-    column-gap: 146px;
+       -moz-column-gap: 146px;
+            column-gap: 146px;
     row-gap: 28px;
     max-width: 100%;
   }
@@ -2723,8 +2746,8 @@ svg {
     -ms-grid-columns: 79px 75px 89px;
     grid-template-columns: 79px 89px;
     -webkit-column-gap: 75px;
-    -moz-column-gap: 75px;
-    column-gap: 75px;
+       -moz-column-gap: 75px;
+            column-gap: 75px;
   }
 
   .footer__bottom {
@@ -2807,8 +2830,8 @@ svg {
   .transfers-aside__box.reset {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     padding-left: 91px;
     margin-left: -22px;
     background-size: 76px 105px;
@@ -2935,7 +2958,8 @@ svg {
   }
 
   .guests-content__esters-guests {
-    padding: 9px 15px 6px;
+    padding: 9px 10px 6px;
+    min-width: 150px;
   }
 
 
@@ -2968,8 +2992,8 @@ svg {
   .playlists__card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-left: 0;
     padding-top: 113px;
     background-position: top center;
@@ -3083,7 +3107,7 @@ svg {
   }
 
   .purchase__market-link {
-    padding: 17px 18px 17px 42px;
+    padding: 17px 10px 17px 42px;
     max-width: 256px;
     font-size: 16px;
     background-position: left 16px center;
@@ -3150,19 +3174,15 @@ svg {
   ::-webkit-input-placeholder {
     font-size: 16px;
   }
-
   ::-moz-placeholder {
     font-size: 16px;
   }
-
   :-ms-input-placeholder {
     font-size: 16px;
   }
-
   ::-ms-input-placeholder {
     font-size: 16px;
   }
-
   ::placeholder {
     font-size: 16px;
   }
@@ -3207,14 +3227,14 @@ svg {
     width: 11px;
     height: 11px;
     -webkit-transform: translateY(-55%);
-    -ms-transform: translateY(-55%);
-    transform: translateY(-55%);
+        -ms-transform: translateY(-55%);
+            transform: translateY(-55%);
   }
 
   .about-form__checkbox-descr::after {
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 
 }
@@ -3356,8 +3376,8 @@ svg {
     -ms-grid-columns: 65px 78px 66px;
     grid-template-columns: 65px 66px;
     -webkit-column-gap: 78px;
-    -moz-column-gap: 78px;
-    column-gap: 78px;
+       -moz-column-gap: 78px;
+            column-gap: 78px;
     row-gap: 17.7px;
     padding-top: 28px;
     padding-bottom: 28px;

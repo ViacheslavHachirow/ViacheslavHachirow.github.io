@@ -279,9 +279,16 @@ svg {
   background-color: var(--dim-blueviolet);
 }
 
-.header__list-box::-webkit-scrollbar-thumb:hover {
-  background-color: var(--normal-blueviolet);
+
+
+/* Убираем :hover на сенсорны устройствах */
+@media (any-hover: hover) {
+  .header__list-box::-webkit-scrollbar-thumb:hover {
+    background-color: var(--normal-blueviolet);
+  }
 }
+
+
 
 .header__list-box::-webkit-scrollbar-thumb:active {
   background-color: var(--saturated-blueviolet);
@@ -857,6 +864,8 @@ svg {
 }
 
 .guests-content__esters-guests {
+  display: inline-block;
+  text-align: center;
   padding: 11px 19px 10px;
   outline: 2px solid var(--dim-blueviolet);
   outline-offset: -1px;
@@ -1537,9 +1546,16 @@ svg {
   transition: outline-color var(--transition-time);
 }
 
-.footer__site-link:focus-visible:not(:hover) {
-  outline-color: var(--dim-blueviolet);
+
+
+/* Убираем :hover на сенсорных устройствах */
+@media (any-hover: hover) {
+  .footer__site-link:focus-visible:not(:hover) {
+    outline-color: var(--dim-blueviolet);
+  }
 }
+
+
 
 .footer__site-logo {
   display: block;
@@ -1916,9 +1932,16 @@ svg {
     background-color: var(--dim-blueviolet);
   }
 
-  .header__navigation::-webkit-scrollbar-thumb:hover {
-    background-color: var(--normal-blueviolet);
+
+
+  /* Убираем :hover эффекты на сенсорных устройствах */
+  @media (any-hover: hover) {
+    .header__navigation::-webkit-scrollbar-thumb:hover {
+      background-color: var(--normal-blueviolet);
+    }
   }
+
+
 
   .header__navigation::-webkit-scrollbar-thumb:active {
     background-color: var(--saturated-blueviolet);
@@ -2648,7 +2671,8 @@ svg {
   }
 
   .guests-content__esters-guests {
-    padding: 9px 15px 6px;
+    padding: 9px 10px 6px;
+    min-width: 150px;
   }
 
 
@@ -2793,7 +2817,7 @@ svg {
   }
 
   .purchase__market-link {
-    padding: 17px 18px 17px 42px;
+    padding: 17px 10px 17px 42px;
     max-width: 256px;
     font-size: 16px;
     background-position: left 16px center;
